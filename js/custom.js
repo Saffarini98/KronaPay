@@ -1,31 +1,58 @@
-(function($) {
-    "use strict";
-	
+(function ($) {
+	"use strict";
+
 	/* ..............................................
 	Loader 
     ................................................. */
-	
-	$(window).on('load', function() { 
-		$('.preloader').fadeOut(); 
-		$('#preloader').delay(550).fadeOut('slow'); 
-		$('body').delay(450).css({'overflow':'visible'});
+
+	$(window).on('load', function () {
+		$('.preloader').fadeOut();
+		$('#preloader').delay(550).fadeOut('slow');
+		$('body').delay(450).css({
+			'overflow': 'visible'
+		});
 	});
-    	
+
 	/* ..............................................
     Navbar Bar
     ................................................. */
-	
-	$('.navbar-nav .nav-link').on('click', function() {
-		var toggle = $('.navbar-toggler').is(':visible');
-		if (toggle) {
-			$('.navbar-collapse').collapse('hide');
-		}
+
+	// $('.navbar-nav .nav-link').on('click', function() {
+	// 	var toggle = $('.navbar-toggler').is(':visible');
+	// 	if (toggle) {
+	// 		$('.navbar-collapse').collapse('hide');
+	// 	}
+	// });
+
+	$(document).ready(function () {
+		// Add smooth scrolling to all links
+		$("#navs a").on('click', function (event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function () {
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			} // End if
+		});
 	});
-	
+
 	/* ..............................................
     Fixed Menu
     ................................................. */
-    
+
 	$(window).on('scroll', function () {
 		if ($(window).scrollTop() > 50) {
 			$('.top-header').addClass('fixed-menu');
@@ -56,8 +83,8 @@
 	/* ..............................................
     Gallery
     ................................................. */
-	
-	$(document).ready(function() {
+
+	$(document).ready(function () {
 		$('.popup-gallery').magnificPopup({
 			delegate: 'a',
 			type: 'image',
@@ -66,21 +93,21 @@
 			gallery: {
 				enabled: true,
 				navigateByImgClick: true,
-				preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+				preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 			},
 			image: {
 				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-				titleSrc: function(item) {
+				titleSrc: function (item) {
 					return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
 				}
 			}
 		});
 	});
-	
+
 	/* ..............................................
     Scroll To Top
     ................................................. */
-	
+
 	$(document).ready(function () {
 
 		$(window).scroll(function () {
@@ -99,9 +126,8 @@
 		});
 
 	});
-	
-	
 
-	
+
+
+
 }(jQuery));
-

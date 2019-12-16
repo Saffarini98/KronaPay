@@ -18,7 +18,7 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="apple-touch-icon" href="#" />
-<link rel="stylesheet" href="css/animates.css" />
+    <link rel="stylesheet" href="css/animates.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Pogo Slider CSS -->
@@ -29,54 +29,54 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
-<!-- <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="css/materialize.min.css">
 
 <script src="js/materialize.min.js"></script> -->
 
-<script>
-var currencies={
-  USD: {
-    RUB:65
-  },
-  RUB: {
-    USD:0.0154
-  }
-};
+    <script>
+        var currencies = {
+            USD: {
+                RUB: 65
+            },
+            RUB: {
+                USD: 0.0154
+            }
+        };
 
-document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
 
- document.getElementById("forex-amount").addEventListener("input",calculator);
- document.getElementById("forex-rate-from").addEventListener("change",calculator);
- document.getElementById("forex-rate-to").addEventListener("change",calculator);
-
-
- function calculator(){
-      let amount = document.getElementById("forex-amount").value;
-      let currencyFrom = document.getElementById("forex-rate-from").value;
-      let currencyTo = document.getElementById("forex-rate-to").value;
-      let rate = 1
-if (currencyFrom != currencyTo){
-  rate = currencies[currencyFrom][currencyTo]
-};
-console.log(rate,currencyFrom,currencyTo);
-   if(rate == "select"){
-          document.getElementById("forex-ugx").setAttribute("placeholder","please select currency");
-   }else{
-      let compute = amount * rate;
-
-  document.getElementById("forex-ugx").value = compute.toFixed(2);
-   }
- }
+            document.getElementById("forex-amount").addEventListener("input", calculator);
+            document.getElementById("forex-rate-from").addEventListener("change", calculator);
+            document.getElementById("forex-rate-to").addEventListener("change", calculator);
 
 
+            function calculator() {
+                let amount = document.getElementById("forex-amount").value;
+                let currencyFrom = document.getElementById("forex-rate-from").value;
+                let currencyTo = document.getElementById("forex-rate-to").value;
+                let rate = 1
+                if (currencyFrom != currencyTo) {
+                    rate = currencies[currencyFrom][currencyTo]
+                };
+                console.log(rate, currencyFrom, currencyTo);
+                if (rate == "select") {
+                    document.getElementById("forex-ugx").setAttribute("placeholder", "please select currency");
+                } else {
+                    let compute = amount * rate;
+
+                    document.getElementById("forex-ugx").value = compute.toFixed(2);
+                }
+            }
 
 
 
- // let menu = document.querySelectorAll('select');
- //  M.FormSelect.init(menu,{});
 
-});
-</script>
+
+            // let menu = document.querySelectorAll('select');
+            //  M.FormSelect.init(menu,{});
+
+        });
+    </script>
 
 
 
@@ -103,7 +103,7 @@ console.log(rate,currencyFrom,currencyTo);
     <section id="#header">
         <header class="top-header">
             <div class="header_top">
-    
+
                 <div class="container">
                     <div class="row">
                         <div class="logo_section">
@@ -111,56 +111,52 @@ console.log(rate,currencyFrom,currencyTo);
                         </div>
                         <div class="site_information">
                             <ul>
-                                <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png" alt="#" />KronaPay@gmail.com</a></li>
-                                <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png" alt="#" />+46123569847</a></li>
-                                <li><a class="join_bt" href="#">Join us</a></li>
+                                <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png"
+                                            alt="#" />KronaPay@gmail.com</a></li>
+                                <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png"
+                                            alt="#" />+46123569847</a></li>
+                                <li><a class="join_bt" href="#">Kontakta oss</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-    
+
             </div>
             <div class="header_bottom">
-              <div class="container">
-                <div class="col-sm-12">
-                    <div class="menu_orange_section" style="background: #e43333;">
-                       <nav class="navbar header-nav navbar-expand-lg">
-                         <div class="menu_section">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                        <ul class="navbar-nav">
-                            <li><a class="nav-link active" href="index.html">Home</a></li>
-                            <li><a class="nav-link" href="about.html">About</a></li>
-                            <li><a class="nav-link" href="exchange.html">Exchange</a></li>
-                            <li><a class="nav-link" href="services.html">Services</a></li>
-                            <li><a class="nav-link" href="new.html">News</a></li>
-                            <li><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                         </div>
-                     </nav>
-                     <div class="search-box">
-                        <input type="text" class="search-txt" placeholder="Search">
-                        <a class="search-btn">
-                            <img src="images/search_icon.png" alt="#" />
-                        </a>
-                    </div>
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div class="menu_orange_section" style="background: #e43333;">
+                            <nav class="navbar header-nav navbar-expand-lg sticky">
+                                <div class="menu_section">
+                                    <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                                        <ul class="navbar-nav">
+                                            <li><a class="nav-link active" href="#first">Hem</a></li>
+
+                                            <li><a class="nav-link" href="">Våra tjänster</a></li>
+                                            <li><a class="nav-link" href="#first">Beställ valuta</a></li>
+                                            <li><a class="nav-link" href="">Om oss</a></li>
+                                            <li><a class="nav-link" href="">Kontakt</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="search-box">
+                                <input type="text" class="search-txt" placeholder="Search">
+                                <a class="search-btn">
+                                    <img src="images/search_icon.png" alt="#" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
-    
+
         </header>
     </section>
     <!-- End header -->
 
     <!-- Start Banner -->
-    <section id="#slider">
-        
+    <section id="#first">
         <div class="ulockd-home-slider">
             <div class="container-fluid">
                 <div class="row">
@@ -199,172 +195,183 @@ console.log(rate,currencyFrom,currencyTo);
     </section>
     <!-- End Banner -->
 
-	<!-- section -->
-    <div class="section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5 offset-md-1">
-                  <!-- style="margin: 90px 0px 0px 0px; width: 500px;" -->
-                    <div class="animated swing wow card-panel z-depth-4 md-form">
-
-
-
-
-                         <form  style="color: #757575" action="#">
-<br><br>
-                    <h3>  <label for="colFormLabelSm">Valutaomvandlare</label></h3>
-
-                      <input type="number" id="forex-amount" placeholder="Enter Amount" class="form-control" style="width: 50%">
-
-                      <br>
-                      <label for="colFormLabelSm">From</label>
-                      <select id="forex-rate-from" name="rate" class="form-control selcls" style="width: 50%">
-                         <option disabled value="select" selected>select currency</option>
-                           <option value="USD">USD</option>
-                           <option value="RUB">RUB</option>
-
-                      </select>
-                      <label for="colFormLabelSm">To</label>
-                      <select id="forex-rate-to" name="rate" class="form-control selcls" style="width: 50%">
-                         <option disabled value="select" selected>select currency</option>
-                         <option value="USD">USD</option>
-                         <option value="RUB">RUB</option>
-
-                      </select>
-
-
-                    <br>
-
-                      <label for="colFormLabelSm">Amount</label>
-
-                      <input type="text" placeholder="Amount In UGX" id="forex-ugx" class="form-control" style="width: 50%">
-
-                    </form>
-
-
-
-
-
-
-  </div>
-
-                </div>
-                <div class="col-md-6 layout_padding">
-<h1 class="animated wow lightSpeedIn">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-						   <h2><span class="theme_color">Välkommen</span> till Kronapay</h2>
-                        </div>
-                    </div>
-                    </h1>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">About more ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<!-- end section -->
     <!-- section -->
-<container>
-    <div class="section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>Services</h2>
+
+    <section id="#second" style="background-color: white;">
+        <div class="section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <!-- style="margin: 90px 0px 0px 0px; width: 500px;" -->
+                        <div class="animated swing wow card-panel z-depth-4 md-form">
+
+
+
+
+                            <form style="color: #757575" action="#">
+                                <br><br>
+                                <h3> <label for="colFormLabelSm">Valutaomvandlare</label></h3>
+
+                                <input type="number" id="forex-amount" placeholder="Enter Amount" class="form-control"
+                                    style="width: 50%">
+
+                                <br>
+                                <label for="colFormLabelSm">From</label>
+                                <select id="forex-rate-from" name="rate" class="form-control selcls" style="width: 50%">
+                                    <option disabled value="select" selected>select currency</option>
+                                    <option value="USD">USD</option>
+                                    <option value="RUB">RUB</option>
+
+                                </select>
+                                <label for="colFormLabelSm">To</label>
+                                <select id="forex-rate-to" name="rate" class="form-control selcls" style="width: 50%">
+                                    <option disabled value="select" selected>select currency</option>
+                                    <option value="USD">USD</option>
+                                    <option value="RUB">RUB</option>
+
+                                </select>
+
+
+                                <br>
+
+                                <label for="colFormLabelSm">Amount</label>
+
+                                <input type="text" placeholder="Amount In UGX" id="forex-ugx" class="form-control"
+                                    style="width: 50%">
+
+                            </form>
+
+
+
+
+
+
                         </div>
+
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                       <img class="img-responsive" src="images/s1.png" alt="#" />
-                       <h4>Safe & Secure</h4>
-                    </div>
-                </div> -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s2.png" alt="#" />
-                        <h4>Money Exchange</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s3.png" alt="#" />
-                        <h4>Money Transfer</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/s4.png" alt="#" />
-                        <h4>Office Delevery</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-top_30">
-                <div class="col-sm-12">
-                    <div class="full">
-                        <div class="center">
-                            <a class="main_bt" href="#">About more ></a>
+                    <div class="col-md-6 layout_padding">
+                        <h1 class="animated wow lightSpeedIn">
+                            <div class="full paddding_left_15">
+                                <div class="heading_main text_align_left">
+                                    <h2><span class="theme_color">Välkommen</span> till Kronapay</h2>
+                                </div>
+                            </div>
+                        </h1>
+                        <div class="full paddding_left_15">
+                            <p>Kronapay AB är ett finansbolag som handlar med valutaväxling, penningöverföring och
+                                betaltjänster. Vi erbjuder kunderna växling <strong> utan några avgifter</strong> och
+                                försöker allitd
+                                att
+                                få våra kunder nöjda med vår service. Vid växling av större belopp erbjuder vi kunderna
+                                ännu
+                                bättre kurser vid överenskommelse med en av personalen. Har du några frågor är du
+                                välkommen
+                                att kontakta oss.</p>
+                        </div>
+                        <div class="full paddding_left_15">
+                            <a class="main_bt" href="#">Kontakta oss ></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </container>
+    </section>
     <!-- end section -->
     <!-- section -->
     <container>
-    <div class="section white_fonts" style="background: #2a2a2a;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="background: #fff;">
-                    <div class="full text_align_right_img">
-                        <img src="images/img2.png" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                           <h2><span class="theme_color">Apply for</span> Exchange</h2>
+        <div class="section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="full">
+                            <div class="heading_main text_align_center">
+                                <h2><span class="theme_color"></span>Våra tjänster</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="full services_blog">
+                            <img class="img-responsive" src="images/s2.png" alt="#" />
+                            <h4>Växla pengar</h4>
+                        </div>
                     </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Exchange</a>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="full services_blog">
+                            <img class="img-responsive" src="images/s3.png" alt="#" />
+                            <h4>Skicka pengar</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="full services_blog">
+                            <img class="img-responsive" src="images/s4.png" alt="#" />
+                            <h4>Kontorleverans</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row margin-top_30">
+                    <div class="col-sm-12">
+                        <div class="full">
+                            <div class="center">
+                                <a class="main_bt" href="#">Mer om våra tjänster ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </container>
+    <!-- end section -->
+
+    <!-- section -->
+    <container>
+        <div class="section white_fonts" style="background: #2a2a2a;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="background: #fff;">
+                        <div class="full text_align_right_img">
+                            <img src="images/img2.png" alt="#" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 layout_padding">
+                        <div class="full paddding_left_15">
+                            <div class="heading_main text_align_left">
+                                <h2><span class="theme_color">Beställ valuta </span>online</h2>
+                            </div>
+                        </div>
+                        <div class="full paddding_left_15">
+                            <p>Visste du att du både kan köpa och reservera valuta online hos oss. Köper du online kan
+                                du även få valutan hemskickad till närmsta postombud.</p>
+                        </div>
+                        <div class="full paddding_left_15">
+                            <a class="main_bt" href="#">Ansök</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </container>
     <!-- end section -->
-	<!-- section -->
+    <!-- section -->
     <div class="section layout_padding about_bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="full paddding_left_15">
                         <div class="heading_main text_align_left">
-                           <h2>Om oss</h2>
+                            <h2>Om oss</h2>
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>Vi erbjuder kunderna växling helt utan några avgifter och försöker allitd att få våra kunder nöjda med vår service.
-                                vid växling av större belopp erbjuder vi kunderna ännu bättre kurser vid överenskommelse med en av personalen. Har du några frågor är du välkommen att kontakta oss.</p>
+                        <p>Vi erbjuder kunderna växling helt utan några avgifter och försöker allitd att få våra kunder
+                            nöjda med vår service.
+                            vid växling av större belopp erbjuder vi kunderna ännu bättre kurser vid överenskommelse med
+                            en av personalen. Har du några frågor är du välkommen att kontakta oss.</p>
                     </div>
                     <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
+                        <a class="main_bt" href="#">Läs mer ></a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -375,52 +382,7 @@ console.log(rate,currencyFrom,currencyTo);
             </div>
         </div>
     </div>
-    <!-- end section -->
-	<!-- section -->
-    <!-- <div class="section layout_padding padding_top_0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>News</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                       <img class="img-responsive" src="images/b1.png" alt="#" />
-                       <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Bitcoin News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b2.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Ethereum News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="full news_blog">
-                        <img class="img-responsive" src="images/b3.png" alt="#" />
-                        <div class="overlay"><a class="main_bt transparent" href="#">View</a></div>
-                       <div class="blog_details">
-                         <h3>Light News</h3>
-                         <p>pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                       </div>
-                    </div>
-                </div>
-             </div> -->
-        </div>
+    </div>
     </div>
     <!-- end section -->
     <!-- section -->
@@ -430,7 +392,7 @@ console.log(rate,currencyFrom,currencyTo);
                 <div class="col-md-12">
                     <div class="full">
                         <div class="heading_main text_align_center">
-                           <h2><span class="theme_color"></span>Contact</h2>
+                            <h2><span class="theme_color"></span>Kontakt</h2>
                         </div>
                     </div>
                 </div>
@@ -440,90 +402,120 @@ console.log(rate,currencyFrom,currencyTo);
     <!-- end section -->
     <!-- contact_form -->
     <!--Google map-->
-<div class="section layout_padding padding_top_0">
-    <div class="container-fluid">
-      <center>
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBUTArjSqyJq4fb1AkJQcBYTWecNZpD44k&callback=initMap'></script>
-    <div style='overflow:hidden;height:600px;width:1767px;'>
-      <div id='gmap_canvas' style='height:600px;width:1767px;'>
+    <div class="section layout_padding padding_top_0">
+        <div class="container-fluid">
+            <center>
+                <script
+                    src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBUTArjSqyJq4fb1AkJQcBYTWecNZpD44k&callback=initMap'>
+                </script>
+                <div style='overflow:hidden;width: auto;'>
+                    <div id='gmap_canvas' style='height:600px;width:1700px;'>
 
-      </div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-    </div>
-    <a href='http://maps-website.com/'>https://www.Maps-website.com</a>
-    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=32964c176ce89bf0704554a2dc1499815eab13b7'></script>
-    <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(59.427574,17.952380),mapTypeId: google.maps.MapTypeId.ROADMAP};
-    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-    marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(59.42757,17.952380)});
-    infowindow = new google.maps.InfoWindow({content:'<strong>KronaPay</strong><br>stormansvegen<br>19270 Stockholm,Sollentuna<br>'});
-    infowindow = new google.maps.InfoWindow({content:'<strong>KronaPay</strong><br>stormansvegen<br>19270 Stockholm,Sollentuna<br>'});
-    google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
-    google.maps.event.addDomListener(window, 'load', init_map);
-  </script>
-</center>
-    </container>
+                    </div>
+                    <style>
+                        #gmap_canvas img {
+                            max-width: none !important;
+                            background: none !important
+                        }
+                    </style>
+                </div>
+                <a href='http://maps-website.com/' style="color: white;">h</a>
+                <script type='text/javascript'
+                    src='https://embedmaps.com/google-maps-authorization/script.js?id=32964c176ce89bf0704554a2dc1499815eab13b7'>
+                </script>
+                <script type='text/javascript'>
+                    function init_map() {
+                        var myOptions = {
+                            zoom: 11,
+                            center: new google.maps.LatLng(59.394533, 18.048917),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(59.394533, 18.048917)
+                        });
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<strong>KronaPay</strong><br>Vendevägen 90<br>182 32 Danderyd, Stockholm<br>'
+                        });
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<strong>KronaPay</strong><br>Vendevägen 90<br>182 32 Danderyd, Stockholm<br>'
+                        });
+                        google.maps.event.addListener(marker, 'click', function () {
+                            infowindow.open(map, marker);
+                        });
+                        infowindow.open(map, marker);
+                    }
+                    google.maps.event.addDomListener(window, 'load', init_map);
+                </script>
+            </center>
+            </container>
 
-    </div>
+        </div>
     </div>
     <!--Google Maps-->
     <!-- end contact_form -->
     <!-- end section -->
     <!-- Start Footer -->
-    <footer class="footer-box">
-        <div class="container">
-            <div class="row">
-               <div class="col-md-12 white_fonts">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <img class="img-responsive" src="images/footer_logo.png" alt="#" />
+    <section id="#fourth">
+        <footer class="footer-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 white_fonts">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="full">
+                                    <img class="img-responsive" src="images/footer_logo.png" alt="#" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="full">
+                                    <h3><br>Länkar</h3>
+                                </div>
+                                <div class="full sticky" id="#navs">
+                                    <ul class="menu_footer">
+                                        <li><a href="#first"> Hem</a></li>
+                                        <li><a href=""> Våra tjänster</a></li>
+                                        <li><a href=""> Beställ valuta </a></li>
+                                        <li><a href=""> Om oss</a></li>
+                                        <li><a href=""> Kontakt</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="full">
+                                    <div class="footer_blog full white_fonts">
+                                        <h3>Skicka oss ett <br>e-post
+                                        </h3>
+                                        <p>Fyll i nedan ditt e-post så återkommer vi till dig så snart
+                                            som möjligt.</p>
+                                        <div class="newsletter_form">
+                                            <form action="index.html">
+                                                <input type="email" placeholder="Ditt e-post" name="#" required="">
+                                                <button>Skicka</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="full">
+                                    <div class="footer_blog full white_fonts">
+                                        <h3>Kontakt information</h3>
+                                        <ul class="full">
+                                            <li><img src="images/i5.png"><span>London 145<br>United Kingdom</span></li>
+                                            <li><img src="images/i6.png"><span>demo@gmail.com</span></li>
+                                            <li><img src="images/i7.png"><span>+12586954775</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <h3>Quick Links</h3>
-                            </div>
-                            <div class="full">
-                                <ul class="menu_footer">
-                                    <li><a href="home.html">> Home</a></li>
-                                    <li><a href="about.html">> About</a></li>
-                                    <li><a href="exchange.html">> Exchange</a></li>
-                                    <li><a href="services.html">> Services</a></li>
-                                    <li><a href="new.html">> New</a></li>
-                                    <li><a href="contact.html">> Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <div class="footer_blog full white_fonts">
-                             <h3>Newsletter</h3>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                             <div class="newsletter_form">
-                                <form action="index.html">
-                                   <input type="email" placeholder="Your Email" name="#" required="">
-                                   <button>Submit</button>
-                                </form>
-                             </div>
-                         </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <div class="footer_blog full white_fonts">
-                             <h3>Contact us</h3>
-                             <ul class="full">
-                               <li><img src="images/i5.png"><span>London 145<br>United Kingdom</span></li>
-                               <li><img src="images/i6.png"><span>demo@gmail.com</span></li>
-                               <li><img src="images/i7.png"><span>+12586954775</span></li>
-                             </ul>
-                         </div>
-                            </div>
-                        </div>
-					</div>
+                    </div>
                 </div>
-			 </div>
-        </div>
-    </footer>
+            </div>
+        </footer>
+    </section>
     <!-- End Footer -->
 
     <div class="footer_bottom">
@@ -540,7 +532,7 @@ console.log(rate,currencyFrom,currencyTo);
 
     <!-- ALL JS FILES -->
     <script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -552,128 +544,126 @@ console.log(rate,currencyFrom,currencyTo);
     <script src="js/isotope.min.js"></script>
     <script src="js/images-loded.min.js"></script>
     <script src="js/custom.js"></script>
-	<script>
-	/* counter js */
+    <script>
+        /* counter js */
 
-(function ($) {
-	$.fn.countTo = function (options) {
-		options = options || {};
+        (function ($) {
+            $.fn.countTo = function (options) {
+                options = options || {};
 
-		return $(this).each(function () {
-			// set options for current element
-			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
-				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
-			}, options);
+                return $(this).each(function () {
+                    // set options for current element
+                    var settings = $.extend({}, $.fn.countTo.defaults, {
+                        from: $(this).data('from'),
+                        to: $(this).data('to'),
+                        speed: $(this).data('speed'),
+                        refreshInterval: $(this).data('refresh-interval'),
+                        decimals: $(this).data('decimals')
+                    }, options);
 
-			// how many times to update the value, and how much to increment the value on each update
-			var loops = Math.ceil(settings.speed / settings.refreshInterval),
-				increment = (settings.to - settings.from) / loops;
+                    // how many times to update the value, and how much to increment the value on each update
+                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                        increment = (settings.to - settings.from) / loops;
 
-			// references & variables that will change with each update
-			var self = this,
-				$self = $(this),
-				loopCount = 0,
-				value = settings.from,
-				data = $self.data('countTo') || {};
+                    // references & variables that will change with each update
+                    var self = this,
+                        $self = $(this),
+                        loopCount = 0,
+                        value = settings.from,
+                        data = $self.data('countTo') || {};
 
-			$self.data('countTo', data);
+                    $self.data('countTo', data);
 
-			// if an existing interval can be found, clear it first
-			if (data.interval) {
-				clearInterval(data.interval);
-			}
-			data.interval = setInterval(updateTimer, settings.refreshInterval);
+                    // if an existing interval can be found, clear it first
+                    if (data.interval) {
+                        clearInterval(data.interval);
+                    }
+                    data.interval = setInterval(updateTimer, settings.refreshInterval);
 
-			// initialize the element with the starting value
-			render(value);
+                    // initialize the element with the starting value
+                    render(value);
 
-			function updateTimer() {
-				value += increment;
-				loopCount++;
+                    function updateTimer() {
+                        value += increment;
+                        loopCount++;
 
-				render(value);
+                        render(value);
 
-				if (typeof(settings.onUpdate) == 'function') {
-					settings.onUpdate.call(self, value);
-				}
+                        if (typeof (settings.onUpdate) == 'function') {
+                            settings.onUpdate.call(self, value);
+                        }
 
-				if (loopCount >= loops) {
-					// remove the interval
-					$self.removeData('countTo');
-					clearInterval(data.interval);
-					value = settings.to;
+                        if (loopCount >= loops) {
+                            // remove the interval
+                            $self.removeData('countTo');
+                            clearInterval(data.interval);
+                            value = settings.to;
 
-					if (typeof(settings.onComplete) == 'function') {
-						settings.onComplete.call(self, value);
-					}
-				}
-			}
+                            if (typeof (settings.onComplete) == 'function') {
+                                settings.onComplete.call(self, value);
+                            }
+                        }
+                    }
 
-			function render(value) {
-				var formattedValue = settings.formatter.call(self, value, settings);
-				$self.html(formattedValue);
-			}
-		});
-	};
+                    function render(value) {
+                        var formattedValue = settings.formatter.call(self, value, settings);
+                        $self.html(formattedValue);
+                    }
+                });
+            };
 
-	$.fn.countTo.defaults = {
-		from: 0,               // the number the element should start at
-		to: 0,                 // the number the element should end at
-		speed: 1000,           // how long it should take to count between the target numbers
-		refreshInterval: 100,  // how often the element should be updated
-		decimals: 0,           // the number of decimal places to show
-		formatter: formatter,  // handler for formatting the value before rendering
-		onUpdate: null,        // callback method for every time the element is updated
-		onComplete: null       // callback method for when the element finishes updating
-	};
+            $.fn.countTo.defaults = {
+                from: 0, // the number the element should start at
+                to: 0, // the number the element should end at
+                speed: 1000, // how long it should take to count between the target numbers
+                refreshInterval: 100, // how often the element should be updated
+                decimals: 0, // the number of decimal places to show
+                formatter: formatter, // handler for formatting the value before rendering
+                onUpdate: null, // callback method for every time the element is updated
+                onComplete: null // callback method for when the element finishes updating
+            };
 
-	function formatter(value, settings) {
-		return value.toFixed(settings.decimals);
-	}
-}(jQuery));
+            function formatter(value, settings) {
+                return value.toFixed(settings.decimals);
+            }
+        }(jQuery));
 
-jQuery(function ($) {
-  // custom formatting example
-  $('.count-number').data('countToOptions', {
-	formatter: function (value, options) {
-	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-	}
-  });
+        jQuery(function ($) {
+            // custom formatting example
+            $('.count-number').data('countToOptions', {
+                formatter: function (value, options) {
+                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                }
+            });
 
-  // start all the timers
-  $('.timer').each(count);
+            // start all the timers
+            $('.timer').each(count);
 
-  function count(options) {
-	var $this = $(this);
-	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-	$this.countTo(options);
-  }
-});
-	</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+            function count(options) {
+                var $this = $(this);
+                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                $this.countTo(options);
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
     <script>
-	  var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-    scrollContainer: null,    // optional scroll container selector, otherwise use window,
-    resetAnimation: true,     // reset animation on end (default is true)
-  }
-);
-wow.init();
-	</script>
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function (box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null, // optional scroll container selector, otherwise use window,
+            resetAnimation: true, // reset animation on end (default is true)
+        });
+        wow.init();
+    </script>
 </body>
 
 </html>
